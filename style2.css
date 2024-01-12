@@ -1,0 +1,200 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e0e;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 60px; 
+}
+
+header {
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1em; /* Ajuste o valor conforme necessário */
+}
+
+.logo img {
+    width: 100px; /* Ajuste o valor conforme necessário */
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 15px;
+}
+
+/* Adicione essas regras CSS para criar o efeito de revelação no título */
+
+#inicio h1 {
+    position: relative; /* Adiciona posição relativa para o texto */
+}
+
+#inicio h1::after {
+    content: ''; /* Cria um pseudo-elemento para o fundo */
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e; /* Cor de fundo, ajuste conforme necessário */
+    position: absolute;
+    top: 0;
+    left: 0;
+     /* Coloca o fundo abaixo do texto */
+    animation: revealText 2s ease-in-out forwards; /* Define a animação de revelação e mantém o estado final */
+}
+
+@keyframes revealText {
+    to {
+        width: 0; /* Termina com largura zero, revelando o texto */
+    }
+}
+
+h1{
+    color: #fff;
+    font-size: 800%;
+    margin: 0;
+}
+
+h2 {
+    color: #B6007E;
+    font-weight: bold; /* Ajusta o peso da fonte para destacar o título */
+    margin: 10px 0; /* Adiciona espaçamento superior e inferior para melhorar a separação */
+    font-size: 24px; /* Ajusta o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto para um visual mais equilibrado */
+}
+
+
+p {
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+    text-align: justify;
+    line-height: 1.6; /* Ajusta a altura da linha para melhor legibilidade */
+    font-size: 16px; /* Ajusta o tamanho da fonte conforme necessário */
+}
+/* Adiciona um espaçamento adicional no final de cada parágrafo para melhorar a leitura */
+p::after {
+    content: '\00a0'; /* Adiciona um caractere de espaço não quebrável */
+    display: block;
+    height: 1em; /* Ajusta a altura conforme necessário */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #B6007E;
+}
+
+.logo img {
+    width: 150px; 
+    height: auto; 
+}
+
+#inicio, #sobre, #portfolio, #habilidades, #contato {
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #0e0e0e;
+    margin-bottom: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 91%;
+    height: 70px;
+    background-color: #0e0e0e;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    bottom: 40%;
+    left: 50%;
+    width: 2%;
+    height: 10px;
+    background-color: #ffffff37;
+    border-radius: 5px;
+    animation: rotateLine 10s linear infinite;
+    z-index: 1;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 80%;
+    left: 60%; /* Ajuste a posição do segundo círculo conforme necessário */
+    width: 20px;
+    height: 10px;
+    background-color: #ffffff37;
+    border-radius: 50%;
+    animation: rotateCircle 5s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotateLine {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+section {
+    position: relative;
+    /*background: url('/images/gif_fundo.gif') center/cover no-repeat fixed;*/
+    min-height: 100vh;
+    margin: 0;
+    /*background-size: 40% 90%;
+    background-position: right top;*/
+}
