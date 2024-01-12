@@ -5,28 +5,15 @@ html, body {
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0e0e0e;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     min-height: 100vh;
-    margin: 60px; 
+    margin: 250px; 
 }
 
-header {
-    color: #ffffff;
-    padding: 10px 20px;
-}
-
-.logo {
-    font-size: 1em; /* Ajuste o valor conforme necessário */
-}
-
-.logo img {
-    width: 100px; /* Ajuste o valor conforme necessário */
-    height: auto;
-}
 
 ul {
     list-style: none;
@@ -38,14 +25,13 @@ ul {
 li {
     margin-right: 15px;
 }
+/* Adicione essas regras CSS para criar o efeito de revelação apenas para o texto específico */
 
-/* Adicione essas regras CSS para criar o efeito de revelação no título */
-
-#inicio h1 {
-    position: relative; /* Adiciona posição relativa para o texto */
+.reveal-text {
+    position: relative;
 }
 
-#inicio h1::after {
+.reveal-text::after {
     content: ''; /* Cria um pseudo-elemento para o fundo */
     display: block;
     width: 100%;
@@ -54,7 +40,7 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-     /* Coloca o fundo abaixo do texto */
+    z-index: 1; /* Coloca o fundo abaixo do texto */
     animation: revealText 2s ease-in-out forwards; /* Define a animação de revelação e mantém o estado final */
 }
 
@@ -68,9 +54,26 @@ h1{
     color: #fff;
     font-size: 800%;
     margin: 0;
+    text-align: center;
 }
 
 h2 {
+    color: #B6007E;
+    font-weight: bold; /* Ajusta o peso da fonte para destacar o título */
+    margin: 10px 0; /* Adiciona espaçamento superior e inferior para melhorar a separação */
+    font-size: 47px; /* Ajusta o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto para um visual mais equilibrado */
+}
+
+h3 {
+    color: #ffffff;
+    font-weight: bold; /* Ajusta o peso da fonte para destacar o título */
+    margin: 10px 0; /* Adiciona espaçamento superior e inferior para melhorar a separação */
+    font-size: 32px; /* Ajusta o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto para um visual mais equilibrado */
+}
+
+h4 {
     color: #B6007E;
     font-weight: bold; /* Ajusta o peso da fonte para destacar o título */
     margin: 10px 0; /* Adiciona espaçamento superior e inferior para melhorar a separação */
@@ -87,6 +90,14 @@ p {
     line-height: 1.6; /* Ajusta a altura da linha para melhor legibilidade */
     font-size: 16px; /* Ajusta o tamanho da fonte conforme necessário */
 }
+
+.subtitulo {
+    color: #ccc; /* Exemplo: altere a cor conforme necessário */
+    font-size: 18px; /* Exemplo: ajuste o tamanho da fonte conforme necessário */
+    margin-top: 10px; /* Exemplo: ajuste a margem superior conforme necessário */
+    text-align: center;
+}
+
 /* Adiciona um espaçamento adicional no final de cada parágrafo para melhorar a leitura */
 p::after {
     content: '\00a0'; /* Adiciona um caractere de espaço não quebrável */
@@ -105,22 +116,17 @@ a:hover {
     color: #B6007E;
 }
 
-.logo img {
-    width: 150px; 
-    height: auto; 
-}
-
 #inicio, #sobre, #portfolio, #habilidades, #contato {
-    padding: 10px;
     min-height: 100vh;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fff;
     background-color: #0e0e0e;
-    margin-bottom: 0;
+    padding-top: 200px;  
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -138,6 +144,19 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     
 }
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Adiciona o alinhamento vertical */
+}
+
+nav ul li {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
 
 nav a {
     color: #fff;
@@ -146,55 +165,33 @@ nav a {
     font-size: 18px;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    bottom: 40%;
-    left: 50%;
-    width: 2%;
-    height: 10px;
-    background-color: #ffffff37;
-    border-radius: 5px;
-    animation: rotateLine 10s linear infinite;
-    z-index: 1;
+
+#habilidades {
+    /* Adicione estilos conforme necessário para a seção de habilidades */
 }
 
-body::after {
-    content: '';
-    position: fixed;
-    bottom: 80%;
-    left: 60%; /* Ajuste a posição do segundo círculo conforme necessário */
-    width: 20px;
-    height: 10px;
-    background-color: #ffffff37;
-    border-radius: 50%;
-    animation: rotateCircle 5s linear infinite;
-    z-index: 1;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espaçamento entre os itens da grade */
 }
 
-@keyframes rotateLine {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.grid-item {
+    text-align: center;
 }
 
-@keyframes rotateCircle {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.grid-item img {
+    width: 100%; /* Certifica-se de que a largura da imagem é 100% do contêiner */
+    max-width: 50px; /* Defina a largura máxima da imagem conforme necessário */
 }
 
-section {
-    position: relative;
-    /*background: url('/images/gif_fundo.gif') center/cover no-repeat fixed;*/
-    min-height: 100vh;
-    margin: 0;
-    /*background-size: 40% 90%;
-    background-position: right top;*/
+.grid-item p {
+    margin-top: 10px; /* Ajuste conforme necessário */
+    color: #fff; /* Cor do texto */
+}
+.subtitulo2 {
+    color: #ccc; /* Exemplo: altere a cor conforme necessário */
+    font-size: 16px; /* Exemplo: ajuste o tamanho da fonte conforme necessário */
+    margin-top: 10px; /* Exemplo: ajuste a margem superior conforme necessário */
+    text-align: center;
 }
