@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Importações de Santa Catarina · Ana Zanon</title>
+<meta name="description" content="Estudo de caso em Excel com as importações de Santa Catarina em 2020: meses, produtos, vias de transporte e países. Projeto de Ana Zanon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700..800&family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="projeto.css">
+</head>
+<body>
+<header class="top">
+  <nav class="nav" aria-label="Principal">
+    <a class="mark" href="../index.html"><img src="../assets/logo.svg" width="293" height="343" alt="">Ana Zanon</a>
+    <a class="back" href="../index.html#trabalhos">← Voltar aos projetos</a>
+  </nav>
+  <div class="intro">
+    <h1 class="rv">Importações de Santa Catarina</h1>
+    <p class="lede rv" style="--i:1">Estudo de caso com as importações mensais do estado em 2020 e a interpretação dos seus dados, feito para a empresa fictícia “Fictissium”.</p>
+    <dl class="meta rv" style="--i:2">
+      <div><dt>Ferramenta</dt><dd>Excel, tabelas dinâmicas</dd></div>
+      <div><dt>Base</dt><dd>SECINT, janeiro a dezembro de 2020</dd></div>
+      <div><dt>Recorte</dt><dd>UF importadora: Santa Catarina</dd></div>
+      <div><dt>Total FOB</dt><dd>US$ 16,09 bilhões</dd></div>
+    </dl>
+  </div>
+  <div class="band-wrap"><div class="band" aria-hidden="true"></div></div>
+</header>
+
+<main>
+  <figure class="cover chart dark rv">
+    <div class="frame"><img src="../assets/sc/dashboard.png" width="1280" height="699" alt="Dashboard das importações de Santa Catarina em 2020: valores por mês, os cinco produtos mais importados, os cinco países com mais importações, quantidade de produtos por mês e vias de transporte"><i class="dot" aria-hidden="true"></i></div>
+    <figcaption>Dashboard final em Excel.</figcaption>
+  </figure>
+
+  <section aria-labelledby="s0">
+    <h2 id="s0" class="rv">Em números</h2>
+    <div class="stats rv" style="--i:1">
+      <div><b>16,09 bi</b><span>de dólares em importações no ano (FOB)</span></div>
+      <div><b>Dezembro</b><span>mês de maior gasto, seguido de novembro e janeiro</span></div>
+      <div><b>62,16%</b><span>das importações chegaram por via marítima</span></div>
+      <div><b>China</b><span>país com mais produtos importados, 16,25%</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s1">
+    <h2 id="s1" class="rv">Os meses</h2>
+    <div class="body rv" style="--i:1">
+      <p>Primeiro, os dados da planilha foram organizados com a conversão de texto para colunas, para que o Excel conseguisse lê-los. Depois, foram filtrados só os dados de interesse da empresa, com “UF Importadora” igual a Santa Catarina.</p>
+      <p>Para olhar mês a mês, uma tabela dinâmica somou o valor “FOB (US$)” de janeiro a dezembro, num total de <b>US$ 16.091.194.139</b>. Ordenada do maior gasto para o menor, a tabela mostra que os três meses de maior gasto foram dezembro, novembro e janeiro.</p>
+      <table>
+        <caption>Tabela 01 · Mês × soma FOB (US$)</caption>
+        <thead><tr><th scope="col">Mês</th><th scope="col" class="n">Soma FOB (US$)</th></tr></thead>
+        <tbody>
+          <tr><td>Dezembro</td><td class="n">1.889.761.950</td></tr>
+          <tr><td>Novembro</td><td class="n">1.868.488.637</td></tr>
+          <tr><td>Janeiro</td><td class="n">1.505.248.057</td></tr>
+          <tr><td>Outubro</td><td class="n">1.465.948.653</td></tr>
+          <tr><td>Setembro</td><td class="n">1.411.616.365</td></tr>
+          <tr><td>Março</td><td class="n">1.402.536.577</td></tr>
+          <tr><td>Fevereiro</td><td class="n">1.319.175.116</td></tr>
+          <tr><td>Agosto</td><td class="n">1.161.509.749</td></tr>
+          <tr><td>Abril</td><td class="n">1.079.881.598</td></tr>
+          <tr><td>Julho</td><td class="n">1.069.908.868</td></tr>
+          <tr><td>Maio</td><td class="n">1.028.939.075</td></tr>
+          <tr><td>Junho</td><td class="n">888.179.494</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total geral</td><td class="n">16.091.194.139</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="s2">
+    <h2 id="s2" class="rv">Os produtos</h2>
+    <div class="body rv" style="--i:1">
+      <p>Os cinco produtos mais importados para Santa Catarina foram “Máquinas, aparelhos e materiais elétricos”, que aparecem 1.419 vezes nos 12 meses; “Reatores nucleares, caldeiras e máquinas”, 1.285 vezes; “Plásticos e suas obras”, 1.242 vezes; “Obras de ferro fundido, ferro ou aço”, 1.043 vezes; e “Instrumentos e aparelhos de óptica e fotografia”, 1.013 vezes.</p>
+      <p>Os dois gráficos se conversam: entre os 10 produtos com maior média de FOB, três (as colunas em azul, laranja e verde) também estão entre os mais importados em quantidade.</p>
+    </div>
+    <figure class="chart rv">
+      <div class="frame"><img src="../assets/sc/grafico-01.png" width="1280" height="713" alt="Gráfico 01: os cinco produtos mais importados para Santa Catarina, de 1.419 a 1.013 ocorrências" loading="lazy"><i class="dot" aria-hidden="true"></i></div>
+      <figcaption>Gráfico 01 · Os 5 produtos mais importados para Santa Catarina.</figcaption>
+    </figure>
+    <figure class="chart rv">
+      <div class="frame"><img src="../assets/sc/grafico-02.png" width="1280" height="667" alt="Gráfico 02: os 10 produtos com maior média de FOB comparados com a contagem de cada produto" loading="lazy"><i class="dot" aria-hidden="true"></i></div>
+      <figcaption>Gráfico 02 · Produtos com maior média de FOB (10 primeiros) × contagem de produtos.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="s3">
+    <h2 id="s3" class="rv">As vias de transporte</h2>
+    <div class="body rv" style="--i:1">
+      <p>Entre as vias usadas para trazer as importações, a marítima teve o maior número: 16.085 importações em 2020, 62,16% do total e mais que o dobro da segunda maior, a aérea, com 7.990 (30,88%).</p>
+      <p>As vias “meios próprios”, “entrada/saída ficta” e “postal” tiveram valores muito baixos, o que faz sentido junto com o gráfico 04: a maioria dos países de origem exige transporte aéreo ou marítimo. Entre os 10 países que mais exportaram para Santa Catarina, só a Argentina permitiria outro tipo de transporte.</p>
+      <table>
+        <caption>Tabela 02 · Porcentagem de cada via</caption>
+        <thead><tr><th scope="col">Via</th><th scope="col" class="n">Porcentagem</th></tr></thead>
+        <tbody>
+          <tr><td>Marítima</td><td class="n">62,16%</td></tr>
+          <tr><td>Aérea</td><td class="n">30,88%</td></tr>
+          <tr><td>Rodoviária</td><td class="n">6,883%</td></tr>
+          <tr><td>Meios próprios</td><td class="n">0,066%</td></tr>
+          <tr><td>Entrada/saída ficta</td><td class="n">0,008%</td></tr>
+          <tr><td>Postal</td><td class="n">0,004%</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total geral</td><td class="n">100,00%</td></tr></tfoot>
+      </table>
+    </div>
+    <figure class="chart rv">
+      <div class="frame"><img src="../assets/sc/grafico-03.png" width="1276" height="601" alt="Gráfico 03: contagem de importações por via de transporte, com a marítima muito à frente" loading="lazy"><i class="dot" aria-hidden="true"></i></div>
+      <figcaption>Gráfico 03 · Contagem das vias de transporte para Santa Catarina.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="s4">
+    <h2 id="s4" class="rv">Os países e o ano</h2>
+    <div class="body rv" style="--i:1">
+      <p>Os países com mais importações foram China, com 16,25% (1.546 produtos), Estados Unidos com 13,96% (1.328), Alemanha com 12,02% (1.144), Itália com 10,84% (1.031), Índia com 8,89% (846), Argentina com 8,34% (794), Espanha com 8,05% (766), França com 7,84% (746), Japão com 7,05% (671) e Coreia do Sul com 6,76% (643).</p>
+      <p>No gráfico 05, a quantidade de importações não teve valores discrepantes ao longo dos meses: ficou entre 1.886 e 2.393 importações, com pouca variação.</p>
+    </div>
+    <figure class="chart rv">
+      <div class="frame"><img src="../assets/sc/grafico-04.png" width="1280" height="480" alt="Gráfico 04: os 10 países com mais importações para Santa Catarina, liderados pela China" loading="lazy"><i class="dot" aria-hidden="true"></i></div>
+      <figcaption>Gráfico 04 · Os 10 países com maior importação.</figcaption>
+    </figure>
+    <figure class="chart rv">
+      <div class="frame"><img src="../assets/sc/grafico-05.png" width="992" height="605" alt="Gráfico 05: quantidade de importações por mês, estável entre 1.886 e 2.393" loading="lazy"><i class="dot" aria-hidden="true"></i></div>
+      <figcaption>Gráfico 05 · Quantidade de importações por mês.</figcaption>
+    </figure>
+  </section>
+
+  <a class="next" href="ufo-sightings.html"><b>Próximo: UFO Sightings</b><span class="go" aria-hidden="true">→</span></a>
+</main>
+
+<footer>
+  <p>© 2026 Ana Zanon</p>
+  <p><a href="https://www.linkedin.com/in/anaelisazanon" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/anaelisazanon" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:anaelisazanon@gmail.com">E-mail</a></p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})},1200);
+})();
+</script>
+</body>
+</html>

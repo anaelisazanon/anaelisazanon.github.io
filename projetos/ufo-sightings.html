@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UFO Sightings Analysis · Ana Zanon</title>
+<meta name="description" content="Análise de 65 mil relatos de avistamentos de OVNIs nos Estados Unidos, com Python e Power BI. Projeto de Ana Zanon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700..800&family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="projeto.css">
+</head>
+<body>
+<header class="top">
+  <nav class="nav" aria-label="Principal">
+    <a class="mark" href="../index.html"><img src="../assets/logo.svg" width="293" height="343" alt="">Ana Zanon</a>
+    <a class="back" href="../index.html#trabalhos">← Voltar aos projetos</a>
+  </nav>
+  <div class="intro">
+    <h1 class="rv">UFO Sightings Analysis</h1>
+    <p class="lede rv" style="--i:1">Avistamentos de objetos voadores não identificados nos Estados Unidos, de 1969 a 2019: 65 mil relatos, limpos e transformados em perguntas e em um dashboard.</p>
+    <dl class="meta rv" style="--i:2">
+      <div><dt>Ferramentas</dt><dd>Python, Power BI</dd></div>
+      <div><dt>Base</dt><dd>UFO Sightings, Kaggle</dd></div>
+      <div><dt>Volume</dt><dd>65 mil relatos, filtro US</dd></div>
+      <div><dt>Contexto</dt><dd>Processo seletivo trainee, em dupla</dd></div>
+    </dl>
+  </div>
+  <div class="band-wrap"><div class="band" aria-hidden="true"></div></div>
+</header>
+
+<main>
+  <figure class="cover rv">
+    <div class="frame"><img src="../assets/ufo-dashboard.png" width="1280" height="709" alt="Dashboard em Power BI: mapa dos Estados Unidos com as cidades de maior incidência, os destaques Light, Seattle, 22:00 e Saturday, e um gráfico de barras com a duração dos avistamentos ao longo dos anos"><i class="dot" aria-hidden="true"></i></div>
+    <figcaption>Dashboard final em Power BI.</figcaption>
+  </figure>
+
+  <section aria-labelledby="s1">
+    <h2 id="s1" class="rv">O projeto</h2>
+    <div class="body rv" style="--i:1">
+      <p>Projeto feito em dupla como parte de um processo seletivo trainee, com tema livre. Antes de começar, a dupla definiu os passos a seguir:</p>
+      <ul class="rings">
+        <li>Escolha de uma base de dados confiável</li>
+        <li>Escolha do tema</li>
+        <li>Definição das plataformas e linguagens para a análise</li>
+        <li>Limpeza dos dados</li>
+        <li>Definição das perguntas a partir da análise dos dados</li>
+        <li>Criação das visualizações</li>
+      </ul>
+      <p>A base usada foi a UFO Sightings, do Kaggle: 65 mil relatos de avistamentos de OVNIs, com o filtro dos Estados Unidos.</p>
+      <a class="btn" href="https://docs.google.com/presentation/d/1RTEzD8Vg-SpkU5jsunpuSSfgJVrXclQAvQZiCLPqPaI/present" target="_blank" rel="noopener">Ver a apresentação <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section aria-labelledby="s2">
+    <h2 id="s2" class="rv">O que os dados responderam</h2>
+    <div class="stats rv" style="--i:1">
+      <div><b>Light</b><span>Formato com maior incidência</span></div>
+      <div><b>Seattle</b><span>Cidade com maior incidência</span></div>
+      <div><b>22:00</b><span>Hora média dos avistamentos</span></div>
+      <div><b>Sábado</b><span>Dia com maior incidência</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s3">
+    <h2 id="s3" class="rv">Perguntas</h2>
+    <div class="body rv" style="--i:1">
+      <ul class="rings">
+        <li>Quais dias da semana têm mais relatos de OVNIs?</li>
+        <li>Qual período (manhã, tarde, noite, madrugada) tem mais relatos?</li>
+        <li>Qual a hora média das ocorrências?</li>
+        <li>Qual a mediana da duração, em segundos, dos OVNIs relatados?</li>
+        <li>Quais cidades têm mais ocorrências?</li>
+        <li>Qual o formato de maior ocorrência?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="s4">
+    <h2 id="s4" class="rv">Dicionário dos dados</h2>
+    <div class="body rv" style="--i:1">
+      <table class="dict">
+        <thead><tr><th scope="col">Coluna</th><th scope="col">O que guarda</th></tr></thead>
+        <tbody>
+          <tr><td>datetime</td><td>Ano, mês, dia e horário</td></tr>
+          <tr><td>city</td><td>Cidade dos Estados Unidos</td></tr>
+          <tr><td>state</td><td>Estado dos Estados Unidos</td></tr>
+          <tr><td>shape</td><td>Formato do OVNI</td></tr>
+          <tr><td>duration (seconds)</td><td>Duração do avistamento em segundos</td></tr>
+          <tr><td>duration (hours/min)</td><td>Duração do avistamento em horas e minutos</td></tr>
+          <tr><td>comments</td><td>Descrição do fato (coluna summary, renomeada)</td></tr>
+          <tr><td>latitude</td><td>Latitude</td></tr>
+          <tr><td>longitude</td><td>Longitude</td></tr>
+          <tr><td>dia_da_semana</td><td>Dia da semana do avistamento</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <a class="next" href="importacoes-sc.html"><b>Próximo: Importações de SC</b><span class="go" aria-hidden="true">→</span></a>
+</main>
+
+<footer>
+  <p>© 2026 Ana Zanon</p>
+  <p><a href="https://www.linkedin.com/in/anaelisazanon" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/anaelisazanon" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:anaelisazanon@gmail.com">E-mail</a></p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})},1200);
+})();
+</script>
+</body>
+</html>
